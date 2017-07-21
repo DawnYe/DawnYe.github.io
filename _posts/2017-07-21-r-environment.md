@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "R语言环境搭建"
-subtitle:   "A Simple Introduce to R"
+subtitle:   "A Simple Introduction to R"
 date:       2017-07-21 11:00:00
 author:     "207统计工作室"
 header-img: "img/in-post/post-bg/article1.jpeg"
