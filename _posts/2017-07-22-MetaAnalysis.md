@@ -7,6 +7,7 @@ author:     "207统计工作室"
 header-img: "img/in-post/post-bg/article1.jpeg"
 header-mask: 0.3
 catalog:    true
+mathjax: true
 tags:
     - R
     - Meta Analysis
