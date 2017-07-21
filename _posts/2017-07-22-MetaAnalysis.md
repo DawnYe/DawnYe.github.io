@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Meta Analysis in R via *metafor* package"
+title:      "Meta Analysis in R via metafor package"
 subtitle:   "Meta分析"
 date:       2017-07-22 1:00:00
 author:     "207统计工作室"
@@ -154,7 +154,7 @@ predict(mod,transf = exp)
     ##    pred  ci.lb  ci.ub  cr.lb  cr.ub
     ##  1.0692 0.9893 1.1555 0.9893 1.1555
 
-These results shows the amount of heterogeneity ("between-trial variance") is estimated to be *$\\hat{\\tau}^2 = 0$* with a standard error of *$SE\[\\hat{\\tau}^2\] = 0.0064$* and the **I*<sup>2</sup> = 0*, **H*<sup>2</sup> = 1*. Since the **I*<sup>2</sup> = 0*, the fixed-effect model can be a more appropriate method. And test for heterogeneity is **Q* = 4.5908637, *P* − *v**a**l**u**e* = 0.8684174*,which shows less heterogeneity between thses studies.
+These results shows the amount of heterogeneity ("between-trial variance") is estimated to be *$\hat{\tau}^2 = 0$* with a standard error of *$SE\[\hat{\tau}^2\] = 0.0064$* and the **I*<sup>2</sup> = 0*, **H*<sup>2</sup> = 1*. Since the **I*<sup>2</sup> = 0*, the fixed-effect model can be a more appropriate method. And test for heterogeneity is **Q* = 4.5908637, *P* − *v**a**l**u**e* = 0.8684174*,which shows less heterogeneity between thses studies.
 
 Fixed-effect Model
 ------------------
