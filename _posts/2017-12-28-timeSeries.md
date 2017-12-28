@@ -14,21 +14,21 @@ tags:
     - time series
 ---
 
-杂志(Magazine)
+## 杂志(Magazine)
 --------------
 
-![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3780998/)
+![article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3780998/)
 
 **INTERNATIONAL JOURNAL OF EPIDEMIOLOGY**
 
 中科院SCI期刊分区（ 2017最新版本）---医学·一区TOP，IF:7.738
 
-背景(Introduction)
+## 背景(Introduction)
 ------------------
 
 这篇文章旨在介绍环境流行病学中常用的一种研究设计--时间序列回归。这种研究通常用于定量评估环境暴露因素（如空气污染、花粉、粉尘、气象因素）与健康结局之间的短期关系。
 
-数据特征(Data features)
+## 数据特征(Data features)
 -----------------------
 
 ``` r
@@ -60,7 +60,7 @@ rbind(head(data),tail(data))
 
 3.  时间序列回归分析的结局变量通常是计数资料。
 
-描述性分析(Descriptive analysis)
+## 描述性分析(Descriptive analysis)
 --------------------------------
 
 时间序列分析的第一步通常是通过简单的图表来了解数据，如绘制散点图：
@@ -124,7 +124,7 @@ cor(data[,2:4])
     ## temperature        0.4560300   1.0000000        -0.4442078
     ## relative_humidity -0.5269955  -0.4442078         1.0000000
 
-时间序列回归(Time series regression)
+## 时间序列回归(Time series regression)
 ------------------------------------
 
 经过初步的描述性分析，接下来就是建立回归模型（泊松回归）。
@@ -143,7 +143,7 @@ cor(data[,2:4])
 
 3.  结局变量本身的变异大于泊松分布的预测值，因此在建模时有必要进行细微的调整。
 
-控制长期趋势及季节性
+## 控制长期趋势及季节性
 --------------------
 
 主要介绍三种控制长期趋势及季节性的方法：
@@ -453,7 +453,7 @@ abline(h=1,lty=2,lwd=2)
 
 ![](/img/in-post/timeSeries_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-7-1.png)
 
-暴露与结局之间的关联及混杂因素
+## 暴露与结局之间的关联及混杂因素
 ------------------------------
 
 使用该数据，拟合一个简单的泊松回归模型，当只纳入臭氧作为唯一的解释变量，不控制长期趋势及季节性时，可以看出臭氧每升高10*μ**g*/*m*<sup>3</sup>,死亡率相对危险度为0.991(95%CI:0.987 to 0.994, P &lt; 0.001)。
@@ -696,7 +696,7 @@ round(tabeff,2)
 
 另外，其他混杂因素还有相对湿度、其他污染物、星期几效应和节假日效应等。这里不再一一讨论。
 
-探讨暴露因素的滞后效应
+## 探讨暴露因素的滞后效应
 ----------------------
 
 至目前为止，我们讨论了当日臭氧与当日死亡率之间的关联。暴露与结局之间是否可能存在滞后效应，则是需要进一步考虑的问题。即“昨日”的臭氧是否与“今日”的死亡率相关。
@@ -965,7 +965,7 @@ plot(pred8,var=10,type="p",ci="bars",col=1,pch=19,ylim=c(0.99,1.03),
 
 ![](/img/in-post/timeSeries_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-13-1.png)
 
-模型检验及敏感性分析
+## 模型检验及敏感性分析
 --------------------
 
 建立完模型后，绘制残差图及做敏感性分析是发现模型假设、数据异常、残差自相关及结果敏感性是否存在问题的必要措施。
@@ -997,12 +997,12 @@ pacf(residuals(model9,type="deviance"),na.action=na.omit,
 
 ![](/img/in-post/timeSeries_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-14-3.png)
 
-精度与效能
+## 精度与效能
 ----------
 
 据悉，效能计算的方法并非完善。但是我们可知的是时间序列的长度及发生结局效应的人数都能决定研究精度，结局效应的人数过度离散也对精度有所影响。以笔者的经验来看，研究污染物的健康效应，通常数千观测天数，结局数达到数十每天时，模型的精度和效能是可信的。
 
-总结
+## 总结
 ----
 
 时间序列分析的基本思路：
@@ -1041,7 +1041,7 @@ a). Diagnostic plots based on deviance residuals
 
 b). Multiple sensitivity analyses changing key modelling decisions
 
-扩展
+## 扩展
 ----
 
 ### 暴露-结局之间的非线性关联
